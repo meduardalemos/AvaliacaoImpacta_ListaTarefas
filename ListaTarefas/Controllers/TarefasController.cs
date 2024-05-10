@@ -17,35 +17,9 @@ namespace ListaTarefas.Controllers
             return View(_tarefas);
         }
 
-        public IActionResult Create()
-        {
-
-            return RedirectToAction("Index");
-        }
-
-        public IActionResult Concluidas() 
+        public IActionResult Delete()
         {
             return View();
-        }
-
-        public IActionResult PorFazer()
-        {
-            return View();
-        }
-
-        public IActionResult Concluir()
-        {
-
-            return RedirectToAction("Index");
-        }
-
-        public IActionResult Delete(int id)
-        {
-            var tarefa = _tarefas.FirstOrDefault(t => t.TarefaId == id);
-            if (tarefa == null)
-                return NotFound();
-            _tarefas.Remove(tarefa);
-            return RedirectToAction("Index");
         }
     }
 }
