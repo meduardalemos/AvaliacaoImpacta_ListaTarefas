@@ -6,10 +6,12 @@
     border: solid 2.5px #198754;
     border-radius: .75rem;
     padding: .5rem;
+    gap: .5rem
 }
 
 .input-nova-tarefa {
     border: none;
+    width: 80%
 }
 
 .btn-add-tarefa {
@@ -21,7 +23,20 @@
     height: 2.2rem;
 }
 
-input:active{
+.btn-voltar {
+    border-radius: 50%;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    width: 2.2rem;
+    height: 2.2rem;
+}
+
+a:hover {
+    color: white;
+}
+
+input:focus{
     outline: none;
 }
 

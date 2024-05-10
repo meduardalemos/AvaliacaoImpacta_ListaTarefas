@@ -1,10 +1,14 @@
-﻿@model Tarefa
+﻿@{
+    ViewData["Title"] = "Criar nova tarefa";
+}
+
+@model Tarefa
 
 <h2 class="text-center titulo-app"><i class="bi bi-check-square-fill"></i> Lista de Tarefas</h2>
 <br />
 <form asp-action="Create" method="post">
     <div class="d-flex flex-row justify-content-between nova-tarefa-container">
-        <input class="align-self-center form-control input-nova-tarefa" type="text" placeholder="Crie uma nova tarefa..." aria-label="default input example" asp-for="Nome">
+        <input class="align-self-center input-nova-tarefa" type="text" placeholder="Crie uma nova tarefa..." aria-label="default input example" asp-for="Nome">
         <button type="submit" class="btn-add-tarefa"><i class="bi bi-plus"></i></button>
     </div>
 </form>

@@ -5,8 +5,14 @@
 <h5 class="text-center color-green">Atualize o nome da tarefa abaixo</h5>
 
 <form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="TarefaId" />
     <div class="d-flex flex-row justify-content-between nova-tarefa-container">
-        <input class="align-self-center form-control input-nova-tarefa" type="text" placeholder="" aria-label="default input example" asp-for="Nome">
-        <button type="submit" class="btn-add-tarefa"><i class="bi bi-check"></i></button>
+        <input class="align-self-center input-nova-tarefa" type="text" placeholder="" aria-label="default input example" asp-for="Nome">
+        <div class="d-flex flex-row">
+            <button type="submit" class="btn-add-tarefa"><i class="bi bi-check"></i></button>
+            <a class="btn-voltar" asp-action="Index"><i class="bi bi-x-lg"></i></a>
+        </div>
+
     </div>
 </form>
+
