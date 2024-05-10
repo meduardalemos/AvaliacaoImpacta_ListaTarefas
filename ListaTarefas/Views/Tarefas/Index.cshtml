@@ -1,19 +1,19 @@
-﻿@model List<Tarefa>
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+@model List<Tarefa>
 
 <h2 class="text-center titulo-app"><i class="bi bi-check-square-fill"></i> Lista de Tarefas</h2>
-<br />
-<div class="d-flex flex-row justify-content-between nova-tarefa-container align-self-center">
-    <input class="form-control input-nova-tarefa" type="text" placeholder="Crie uma nova tarefa..." aria-label="default input example">
-    <button type="submit" class="btn btn-primary mb-3">Criar</button>
-</div>
+
 <br />
 
-<table class="table">   
+<table class="table text-center">   
     <tr>
         <th>Tarefa</th>
         <th>Concluída</th>
-        <th>Data de início</th>
-        <th>Data de conclusão</th>
+        <th>Criada em</th>
+        <th>Concluída em</th>
         <th></th>
     </tr>
     <tbody>
@@ -30,8 +30,8 @@
                 <td>@tarefa.DtInicio</td>
                 <td>@tarefa.DtConclusao</td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@tarefa.TarefaId" class="btn btn-primary"><i class="bi bi-pencil-square"></i>Editar</a>
-                    <a asp-action="Delete" class="btn btn-danger"><i class="bi bi-trash3-fill"></i>Apagar</a>
+                    <a asp-action="Edit" asp-route-id="@tarefa.TarefaId" class="btn btn-primary"><i class="bi bi-pencil-square"></i> Editar</a>
+                    <a asp-action="Delete" asp-route-id="@tarefa.TarefaId" class="btn btn-danger"><i class="bi bi-trash3-fill"></i> Apagar</a>
                 </td>
             </tr>
         }
