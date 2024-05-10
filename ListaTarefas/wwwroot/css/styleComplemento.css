@@ -1,0 +1,13 @@
+﻿.titulo-app {
+    color: #101e74
+}
+
+.nova-tarefa-container {
+    border: solid 0.5px gray;
+    border-radius: .75rem;
+    padding: .5rem;
+}
+
+.input-nova-tarefa {
+    border: none;
+}
