@@ -1,4 +1,8 @@
-﻿@model Tarefa
+﻿@{
+    ViewData["Title"] = "Editar tarefa";
+}
+
+@model Tarefa
 
 <h2 class="text-center titulo-app"><i class="bi bi-check-square-fill"></i> Lista de Tarefas</h2>
 <br />
@@ -9,8 +13,8 @@
     <div class="d-flex flex-row justify-content-between nova-tarefa-container">
         <input class="align-self-center input-nova-tarefa" type="text" placeholder="" aria-label="default input example" asp-for="Nome">
         <div class="d-flex flex-row">
-            <button type="submit" class="btn-add-tarefa"><i class="bi bi-check"></i></button>
-            <a class="btn-voltar" asp-action="Index"><i class="bi bi-x-lg"></i></a>
+            <button type="submit" class="btn-add-tarefa"><i class="bi bi-check-lg"></i></button>
+            <button type="button" class="btn-voltar"><a asp-action="Index"><i class="bi bi-x-lg"></i></a></button>
         </div>
 
     </div>
